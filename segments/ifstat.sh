@@ -13,11 +13,11 @@ run_segment() {
 	for inf in ${interfaces}; do
 		type=""
 		case ${inf} in
-			eth*) type="⎆"
+			en0) type="⎆"
 				;;
-			wlan*) type="☫"
+			en1) type="☫"
 				;;
-			en*) type=" "
+			bridge*) type=" "
 				;;
 		esac
 		if [ -n "${type}" ]; then
